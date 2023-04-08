@@ -24,13 +24,21 @@ namespace Model
 
         public Level NextLevel { get => _nextLevel; set => _nextLevel = value; }
 
+        private void Awake()
+        {
+            _unlocked = PlayerPrefs.GetInt(this.name + "Unlocked") == 1;
+            _completed = PlayerPrefs.GetInt(this.name + "Completed") == 1;
+        }
+
         public void Unlock()
         {
+            PlayerPrefs.SetInt(this.name + "Unlocked", 1);
             _unlocked = true;
         }
 
         public void Complete()
         {
+            PlayerPrefs.SetInt(this.name + "Completed", 1);
             _completed = true;
         }
     }
