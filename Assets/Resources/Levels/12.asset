@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 12
   m_EditorClassIdentifier: 
   _image: {fileID: 21300000, guid: 16ee6c29462988b48bee8a695d22541e, type: 3}
-  _background: {fileID: 21300000, guid: b4e2d55136af7cc4ba5bc52af96635be, type: 3}
+  _background: {fileID: 21300000, guid: 93d0d6c92bb338c4d9e86bc851f01a01, type: 3}
   _gridSize: {x: 8, y: 8}
   _unlocked: 0
   _completed: 0
