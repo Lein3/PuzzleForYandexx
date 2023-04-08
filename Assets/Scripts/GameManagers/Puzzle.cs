@@ -195,7 +195,8 @@ namespace GameManagers
         {
             imageObject.gameObject.SetActive(true);
             gridObject.gameObject.SetActive(false);
-            StartCoroutine(Victory(0.5f));
+            Level.CurrentLevel.Complete();
+            Level.CurrentLevel.NextLevel.Unlock();
         }
     }
 }
