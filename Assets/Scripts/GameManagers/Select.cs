@@ -13,6 +13,7 @@ namespace GameManagers
 
         private void Start()
         {
+            _levels[0].Unlock();
             ClearLayoutGroup();
             foreach (var level in _levels)
             {

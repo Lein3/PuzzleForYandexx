@@ -25,7 +25,10 @@ namespace CustomEditor
 
                 if (kek % 9 == 0)
                     kek = 3;
+
+                EditorUtility.SetDirty(levels[i]);
             }
+            AssetDatabase.SaveAssets();
         }
     }
     #endif
