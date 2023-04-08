@@ -1,5 +1,6 @@
 using Common;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +14,7 @@ namespace GameManagers
 
         private void Start()
         {
-            _levels[0].Unlock();
+            _levels.Where(item => item.GridSize.x == 3).ToList().ForEach(item => item.Unlock());
             ClearLayoutGroup();
             foreach (var level in _levels)
             {
