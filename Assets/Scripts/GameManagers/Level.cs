@@ -54,7 +54,7 @@ namespace GameManagers
 
         private void LoadNextLevel()
         {
-            if (CurrentLevel.NextLevel is not null)
+            if (CurrentLevel.NextLevel != null)
             {
                 CurrentLevel = CurrentLevel.NextLevel;
                 GlobalSceneTransition.SwitchToScene(SceneStorage.Level);
