@@ -38,6 +38,7 @@ namespace GameManagers
             _mainMenuButton.gameObject.SetActive(false);
             _gallerylButton.gameObject.SetActive(false);
             _nextLevelButton.gameObject.SetActive(false);
+            _watchAddButton.gameObject.SetActive(false);
             GlobalSceneTransition.SceneLoadStart -= SceneTransition_Global_sceneLoadStart;
         }
 
