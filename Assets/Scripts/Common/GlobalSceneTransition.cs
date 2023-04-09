@@ -9,7 +9,7 @@ namespace Common
     {
         public static event Action SceneLoadStart;
         public static GlobalSceneTransition Instance { get; private set; }
-        public static bool IsSceneLoading { get; private set; }
+        public static bool IsSceneLoading { get; private set; } = false;
         public static bool ShouldPlayOpeningAnimation { get; private set; } = false;
 
         private Animator componentAnimator;
@@ -99,7 +99,7 @@ namespace Common
 
         public async void OnAnimationOver()
         {
-            await Task.Delay(700);
+            //await Task.Delay(700);
             IsSceneLoading = false;
             ShouldPlayOpeningAnimation = true;
             loadingSceneOperation.allowSceneActivation = true;

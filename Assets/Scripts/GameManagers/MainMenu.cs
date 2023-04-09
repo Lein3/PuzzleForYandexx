@@ -1,5 +1,7 @@
 ﻿using Common;
+using CustomEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace GameManagers
@@ -20,7 +22,7 @@ namespace GameManagers
         private void OnStartGameButtonClick()
         {
             _startGameButton.GetComponent<Animator>().ResetTrigger("Highlighted");
-            GlobalSceneTransition.SwitchToScene(2);
+            GlobalSceneTransition.SwitchToScene(SceneStorage.Select);
         }
 
         private void OnGalleryButtonClick()
