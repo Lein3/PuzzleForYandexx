@@ -187,6 +187,7 @@ namespace GameManagers
             nextLevelButton.GetComponent<Animation>().Play("Appear");
             Level.CurrentLevel.Complete();
             Level.CurrentLevel.NextLevel.Unlock();
+            Level.CompletedLevelsCount++;
 
             yield return new WaitForSeconds(delay);
         }
@@ -195,7 +196,13 @@ namespace GameManagers
         {
             imageObject.gameObject.SetActive(true);
             gridObject.gameObject.SetActive(false);
+            Level.CompletedLevelsCount--;
             StartCoroutine(Victory(0.5f));
+        }
+
+        public void Unpause()
+        {
+            //FindObjectOfType<AudioSource>().UnPause();
         }
     }
 }

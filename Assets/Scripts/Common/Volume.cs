@@ -32,7 +32,7 @@ namespace Common
             _currentSprite = EnabledSprite;
             Slider.value = _audioSource.volume;
 
-            GlobalSceneTransition.SceneLoadStart += SceneTransition_Global_sceneLoadStart;
+            SceneTransition.SceneLoadStart += SceneTransition_Global_sceneLoadStart;
         }
 
         private void SceneTransition_Global_sceneLoadStart()
@@ -94,7 +94,7 @@ namespace Common
 
         private void OnDestroy()
         {
-            GlobalSceneTransition.SceneLoadStart -= SceneTransition_Global_sceneLoadStart;
+            SceneTransition.SceneLoadStart -= SceneTransition_Global_sceneLoadStart;
         }
     }
 }

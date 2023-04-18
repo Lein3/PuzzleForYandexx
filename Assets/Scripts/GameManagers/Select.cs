@@ -8,7 +8,7 @@ namespace GameManagers
 {
     public class Select : MonoBehaviour
     {
-        [SerializeField] private LevelPlaceholderInitializer _levelPlaceHolderPrefab;
+        [SerializeField] private LevelPlaceholder _levelPlaceHolderPrefab;
         [SerializeField] private GridLayoutGroup _layoutGroup;
         [SerializeField] private List<Model.Level> _levels;
 
