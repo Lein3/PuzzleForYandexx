@@ -23,7 +23,10 @@ namespace GameManagers
                 kek.transform.SetParent(_layoutGroup.transform);
                 kek.GetComponent<RectTransform>().localScale = Vector3.one;
             }
+#if UNITY_EDITOR
+#else
             YandexIntegration.ShowFullscreenAdv();
+#endif
         }
 
         public void ClearLayoutGroup()

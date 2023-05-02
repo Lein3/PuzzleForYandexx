@@ -67,8 +67,9 @@ namespace GameManagers
         {
 #if UNITY_EDITOR
             _puzzle.ForceComplete();
-#endif
+#else
             YandexIntegration.ShowRewardedVideo();
+#endif
         }
 
         private void OnApplicationFocus(bool focus)
