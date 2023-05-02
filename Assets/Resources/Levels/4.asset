@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c695455a06ad843bf4b4f5d6803e30, type: 3}
   m_Name: 4
   m_EditorClassIdentifier: 
-  _image: {fileID: 21300000, guid: 2310c2bffd4a5ba459f5ea55ec8b5694, type: 3}
-  _background: {fileID: 21300000, guid: 64a84261ca1fee04c9dbe96c0a14f02c, type: 3}
+  _image: {fileID: 21300000, guid: 703db96c1b38820449778b359564f776, type: 3}
+  _background: {fileID: 21300000, guid: 987a0ee7b398cf34f8ed0d9f9d0a487a, type: 3}
   _gridSize: {x: 5, y: 5}
   _unlocked: 1
   _completed: 0
