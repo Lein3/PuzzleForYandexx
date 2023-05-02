@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c695455a06ad843bf4b4f5d6803e30, type: 3}
   m_Name: 15
   m_EditorClassIdentifier: 
-  _image: {fileID: 21300000, guid: 9d1e0b7243c512b49be67bb2f168e294, type: 3}
-  _background: {fileID: 21300000, guid: 1a37d6bd902c5524a99d78316e712187, type: 3}
-  _gridSize: {x: 5, y: 5}
-  _unlocked: 0
-  _completed: 0
+  _image: {fileID: 21300000, guid: 5b036d8d60a5af74c8aa6b32f935dc0a, type: 3}
+  _background: {fileID: 21300000, guid: 530c2dd56f045fd41b7e3cc63c77b1dc, type: 3}
+  _gridSize: {x: 4, y: 4}
+  _unlocked: 1
+  _completed: 1
   _nextLevel: {fileID: 11400000, guid: 25f0f5c73c9a6044083601f204c4dcc0, type: 2}

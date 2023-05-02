@@ -65,6 +65,9 @@ namespace GameManagers
 
         private void WatchAdd()
         {
+#if UNITY_EDITOR
+            _puzzle.ForceComplete();
+#endif
             YandexIntegration.ShowRewardedVideo();
         }
 
