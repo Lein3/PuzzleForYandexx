@@ -16,5 +16,5 @@ MonoBehaviour:
   _background: {fileID: 21300000, guid: c899b767ececef6429182e289101d833, type: 3}
   _gridSize: {x: 6, y: 6}
   _unlocked: 1
-  _completed: 0
+  _completed: 1
   _nextLevel: {fileID: 0}
