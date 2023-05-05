@@ -1,7 +1,11 @@
 mergeInto(LibraryManager.library, {
 
     ShowFullscreenAdv: function () {
-        ysdk.adv.showFullscreenAdv();
+        ysdk.adv.showFullscreenAdv({
+            callbacks: {
+                onClose: () => unityInstance.SendMessage('YandexManager', 'UnpauseGame'),
+            }
+        })
     },
 
     ShowRewardedVideo: function () {
@@ -9,13 +13,9 @@ mergeInto(LibraryManager.library, {
             callbacks: {
                 onOpen: () => { },
                 onRewarded: () => unityInstance.SendMessage('Puzzle', 'ForceComplete'),
-                onClose: () => unityInstance.SendMessage('Puzzle', 'Unpause'),
+                onClose: () => unityInstance.SendMessage('YandexManager', 'UnpauseGame'),
                 onError: (e) => { }
             }
         });
     },
-
-    RedirectToYandexGames: function () {
-        ysdk.dispatchEvent(ysdk.EVENTS.EXIT);
-    }
 });
