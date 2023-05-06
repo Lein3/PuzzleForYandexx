@@ -3,6 +3,7 @@ mergeInto(LibraryManager.library, {
     ShowFullscreenAdv: function () {
         ysdk.adv.showFullscreenAdv({
             callbacks: {
+                onOpen: () => unityInstance.SendMessage('Music', 'StartAdvShowed'),
                 onClose: () => unityInstance.SendMessage('YandexManager', 'UnpauseGame'),
             }
         })
