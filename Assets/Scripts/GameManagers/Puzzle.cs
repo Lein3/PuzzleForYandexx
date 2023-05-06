@@ -92,7 +92,7 @@ namespace GameManagers
             }
         }
 
-        IEnumerator UpdateLevel()
+        private IEnumerator UpdateLevel()
         {
             imageObject = imageToSplit;
             Vector2 tileSize = new Vector2(imageObject.rectTransform.sizeDelta.x / gridSize.x, imageObject.rectTransform.sizeDelta.y / gridSize.y);
@@ -129,7 +129,7 @@ namespace GameManagers
                 eventSystem.SetSelectedGameObject(gridObject.Find("00").gameObject);
         }
 
-        IEnumerator SwapImages(Transform firstImage, Vector3 firstTarget, Transform secondImage, Vector3 secondTarget)
+        private IEnumerator SwapImages(Transform firstImage, Vector3 firstTarget, Transform secondImage, Vector3 secondTarget)
         {
             int iterations = 15;
             while (iterations > 0)
@@ -156,7 +156,7 @@ namespace GameManagers
             StartCoroutine(CheckImage());
         }
 
-        IEnumerator CheckImage()
+        private IEnumerator CheckImage()
         {
             bool correctMatch = true;
             for (var index = 0; index < gridObject.childCount; index++)

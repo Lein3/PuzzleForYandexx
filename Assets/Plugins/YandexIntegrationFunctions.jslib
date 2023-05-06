@@ -3,9 +3,9 @@ mergeInto(LibraryManager.library, {
     ShowFullscreenAdvExtern: function () {
         ysdk.adv.showFullscreenAdv({
             callbacks: {
-                onOpen: () => unityInstance.SendMessage('Music', 'StartAdvShowed'),
+                onOpen: () => setTimeout(() => unityInstance.SendMessage('YandexManager', 'AllowShowAdv'), 61000),
                 onClose: () => unityInstance.SendMessage('YandexManager', 'UnpauseGame'),
-                onError: (e) => unityInstance.SendMessage('Music', 'StartAdvShowed'),
+                onError: (e) => unityInstance.SendMessage('YandexManager', 'UnpauseGame'),
             }
         })
     },
@@ -19,5 +19,9 @@ mergeInto(LibraryManager.library, {
                 onError: (e) => { }
             }
         });
+    },
+
+    IsMobileExtern: function () {
+        return IsMobile;
     },
 });

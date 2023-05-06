@@ -10,6 +10,8 @@ namespace Assets.Scripts.YandexIntegration
     {
         public bool CanShowAdv { get; private set; } = true;
 
+        public bool IsMobile => true;
+
         public async void ShowFullscreenAdv()
         {
             if (!CanShowAdv)
@@ -23,7 +25,7 @@ namespace Assets.Scripts.YandexIntegration
             await Task.Delay(3000);
             Debug.Log("ShowFullscreenAdvEnded");
             UnpauseGame();
-            await WaitYandexAdvDelay();
+            AllowShowAdv();
         }
 
         public async void ShowRewardedVideo()
@@ -47,7 +49,7 @@ namespace Assets.Scripts.YandexIntegration
             GameObject.FindObjectsOfType<AudioSource>().ToList().ForEach(item => item.UnPause());
         }
 
-        public async Task WaitYandexAdvDelay()
+        public async void AllowShowAdv()
         {
             CanShowAdv = false;
             await Task.Delay(10000);

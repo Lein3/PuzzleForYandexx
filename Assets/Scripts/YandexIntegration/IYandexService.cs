@@ -6,6 +6,8 @@ namespace Assets.Scripts.YandexIntegration
     {
         public bool CanShowAdv { get; }
 
+        public bool IsMobile { get; }
+
         public void ShowFullscreenAdv();
 
         public void ShowRewardedVideo();
@@ -14,6 +16,6 @@ namespace Assets.Scripts.YandexIntegration
 
         public void UnpauseGame();
 
-        public Task WaitYandexAdvDelay();
+        public void AllowShowAdv();
     }
 }

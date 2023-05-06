@@ -1,9 +1,11 @@
 using UnityEngine;
 using Assets.Scripts.YandexIntegration;
 
-public class YandexIntegration : MonoBehaviour
+public class YandexManager : MonoBehaviour
 {
     private static IYandexService Instance { get; set; }
+
+    public static bool IsMobileDevice => Instance.IsMobile;
 
     private void Awake()
     {
@@ -32,5 +34,10 @@ public class YandexIntegration : MonoBehaviour
     public void UnpauseGame()
     {
         Instance?.UnpauseGame();
+    }
+
+    public void AllowShowAdv()
+    {
+        Instance?.AllowShowAdv();
     }
 }

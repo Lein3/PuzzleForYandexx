@@ -34,7 +34,7 @@ namespace GameManagers
 
             if (CompletedLevelsCount % 3 == 0 && CompletedLevelsCount != 0)
             {
-                YandexIntegration.ShowFullscreenAdv();
+                YandexManager.ShowFullscreenAdv();
             }
         }
 
@@ -66,7 +66,7 @@ namespace GameManagers
 
         private void WatchAdd()
         {
-            YandexIntegration.ShowRewardedVideo();
+            YandexManager.ShowRewardedVideo();
         }
     }
 }

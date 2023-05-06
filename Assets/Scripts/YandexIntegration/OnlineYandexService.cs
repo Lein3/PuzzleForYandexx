@@ -14,16 +14,21 @@ namespace Assets.Scripts.YandexIntegration
         [DllImport("__Internal")]
         private static extern void ShowRewardedVideoExtern();
 
+        [DllImport("__Internal")]
+        private static extern bool IsMobileExtern();
+
         public bool CanShowAdv { get; private set; } = true;
 
-        public async void ShowFullscreenAdv()
+        public bool IsMobile => IsMobileExtern();
+
+        public void ShowFullscreenAdv()
         {
             if (!CanShowAdv)
                 return;
 
             PauseGame();
             ShowFullscreenAdvExtern();
-            await WaitYandexAdvDelay();
+            CanShowAdv = false;
         }
 
         public void ShowRewardedVideo()
@@ -43,10 +48,8 @@ namespace Assets.Scripts.YandexIntegration
             GameObject.FindObjectsOfType<AudioSource>().ToList().ForEach(item => item.UnPause());
         }
 
-        public async Task WaitYandexAdvDelay()
+        public void AllowShowAdv()
         {
-            CanShowAdv = false;
-            await Task.Delay(61000);
             CanShowAdv = true;
         }
     }
