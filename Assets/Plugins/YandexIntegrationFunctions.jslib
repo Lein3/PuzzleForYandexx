@@ -5,6 +5,7 @@ mergeInto(LibraryManager.library, {
             callbacks: {
                 onOpen: () => unityInstance.SendMessage('Music', 'StartAdvShowed'),
                 onClose: () => unityInstance.SendMessage('YandexManager', 'UnpauseGame'),
+                onError: (e) => unityInstance.SendMessage('Music', 'StartAdvShowed'),
             }
         })
     },

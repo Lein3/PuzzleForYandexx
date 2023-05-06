@@ -199,10 +199,5 @@ namespace GameManagers
             Level.CompletedLevelsCount--;
             StartCoroutine(Victory(0.5f));
         }
-
-        public void Unpause()
-        {
-            //FindObjectOfType<AudioSource>().UnPause();
-        }
     }
 }

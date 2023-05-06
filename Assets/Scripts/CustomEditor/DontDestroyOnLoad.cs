@@ -7,8 +7,8 @@ namespace CustomEditor
         void Awake()
         {
             foreach (var @object in FindObjectsOfType<DontDestroyOnLoad>())
-                if (@object.name == gameObject.name && @object != this)
-                    Destroy(gameObject);
+                if (@object.name == this.gameObject.name && @object != this)
+                    Destroy(this.gameObject);
 
             DontDestroyOnLoad(this.gameObject);
         }

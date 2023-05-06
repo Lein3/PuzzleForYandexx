@@ -32,6 +32,12 @@ namespace Common
             _currentSprite = EnabledSprite;
             Slider.value = _audioSource.volume;
 
+            if (Screen.width < 1000)
+            {
+                this.GetComponent<RectTransform>().anchorMin = new Vector2(0.97f, 0.97f);
+                this.transform.localScale *= 2;
+            }
+
             SceneTransition.SceneLoadStart += SceneTransition_Global_sceneLoadStart;
         }
 

@@ -1,5 +1,6 @@
 ﻿using Common;
 using CustomEditor;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,7 +34,7 @@ namespace GameManagers
 
             if (CompletedLevelsCount % 3 == 0 && CompletedLevelsCount != 0)
             {
-                YandexIntegration.Instance.ShowFullscreenAdv();
+                YandexIntegration.ShowFullscreenAdv();
             }
         }
 
@@ -65,7 +66,7 @@ namespace GameManagers
 
         private void WatchAdd()
         {
-            YandexIntegration.Instance.ShowRewardedVideo();
+            YandexIntegration.ShowRewardedVideo();
         }
     }
 }
