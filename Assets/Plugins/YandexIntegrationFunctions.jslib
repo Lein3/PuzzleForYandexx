@@ -1,6 +1,6 @@
 mergeInto(LibraryManager.library, {
 
-    ShowFullscreenAdv: function () {
+    ShowFullscreenAdvExtern: function () {
         ysdk.adv.showFullscreenAdv({
             callbacks: {
                 onOpen: () => unityInstance.SendMessage('Music', 'StartAdvShowed'),
@@ -9,7 +9,7 @@ mergeInto(LibraryManager.library, {
         })
     },
 
-    ShowRewardedVideo: function () {
+    ShowRewardedVideoExtern: function () {
         ysdk.adv.showRewardedVideo({
             callbacks: {
                 onOpen: () => { },

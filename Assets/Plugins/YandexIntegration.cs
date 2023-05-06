@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class YandexIntegration : MonoBehaviour
 {
-    public static YandexIntegration Instance;
+    public static YandexIntegration Instance { get; private set; }
 
     [DllImport("__Internal")]
     private static extern void ShowFullscreenAdvExtern();
