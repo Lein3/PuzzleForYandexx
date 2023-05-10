@@ -27,10 +27,14 @@ namespace Common
                 this.gameObject.SetActive(false);
                 return;
             }
+            if (YandexManager.IsMobileDevice)
+            {
+                AdaptForMobile();
+            }
 
             _isExpanded = false;
             _currentSprite = EnabledSprite;
-            Slider.value = _audioSource.volume;
+            Slider.value = _audioSource.volume;       
 
             SceneTransition.SceneLoadStart += SceneTransition_Global_sceneLoadStart;
         }
@@ -95,6 +99,13 @@ namespace Common
         private void OnDestroy()
         {
             SceneTransition.SceneLoadStart -= SceneTransition_Global_sceneLoadStart;
+        }
+
+        public void AdaptForMobile()
+        {
+            this.GetComponent<RectTransform>().anchorMin = new Vector2(0.97f, 0.97f);
+            this.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 1f);
+            this.transform.localScale *= 2;
         }
     }
 }

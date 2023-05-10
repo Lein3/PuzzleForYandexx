@@ -1,5 +1,6 @@
 ﻿using Common;
 using CustomEditor;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +21,11 @@ namespace GameManagers
 
         void Start()
         {
+            if (YandexManager.IsMobileDevice)
+            {
+                AdaptForMobile();
+            }
+
             SceneTransition.SceneLoadStart += SceneTransition_Global_sceneLoadStart;
             _gallerylButton.onClick.AddListener(ToGallery);
             _nextLevelButton.onClick.AddListener(LoadNextLevel);
@@ -33,7 +39,7 @@ namespace GameManagers
 
             if (CompletedLevelsCount % 3 == 0 && CompletedLevelsCount != 0)
             {
-                YandexIntegration.ShowFullscreenAdv();
+                YandexManager.ShowFullscreenAdv();
             }
         }
 
@@ -65,23 +71,13 @@ namespace GameManagers
 
         private void WatchAdd()
         {
-#if UNITY_EDITOR
-            _puzzle.ForceComplete();
-#else
-            YandexIntegration.ShowRewardedVideo();
-#endif
+            YandexManager.ShowRewardedVideo();
         }
 
-        private void OnApplicationFocus(bool focus)
+        public void AdaptForMobile()
         {
-            if (focus)
-            {
-                FindObjectOfType<AudioSource>().UnPause();
-            }
-            else
-            {
-                FindObjectOfType<AudioSource>().Pause();
-            }
+            _puzzle.transform.Find("ImageObject").GetComponent<RectTransform>().localScale *= new Vector2(1.3f, 1);
+            _puzzle.transform.Find("GridObject").GetComponent<RectTransform>().localScale *= new Vector2(1.3f, 1);
         }
     }
 }
