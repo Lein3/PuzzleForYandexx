@@ -21,6 +21,11 @@ namespace GameManagers
 
         void Start()
         {
+            if (YandexManager.IsMobileDevice)
+            {
+                AdaptForMobile();
+            }
+
             SceneTransition.SceneLoadStart += SceneTransition_Global_sceneLoadStart;
             _gallerylButton.onClick.AddListener(ToGallery);
             _nextLevelButton.onClick.AddListener(LoadNextLevel);
@@ -67,6 +72,12 @@ namespace GameManagers
         private void WatchAdd()
         {
             YandexManager.ShowRewardedVideo();
+        }
+
+        public void AdaptForMobile()
+        {
+            _puzzle.transform.Find("ImageObject").GetComponent<RectTransform>().localScale *= new Vector2(1.3f, 1);
+            _puzzle.transform.Find("GridObject").GetComponent<RectTransform>().localScale *= new Vector2(1.3f, 1);
         }
     }
 }

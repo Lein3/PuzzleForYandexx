@@ -194,6 +194,11 @@ namespace GameManagers
 
         public void ForceComplete()
         {
+            if (YandexManager.IsMobileDevice)
+            {
+                imageObject.GetComponent<Animation>().enabled = false;
+            }
+
             imageObject.gameObject.SetActive(true);
             gridObject.gameObject.SetActive(false);
             Level.CompletedLevelsCount--;

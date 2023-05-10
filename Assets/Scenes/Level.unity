@@ -232,6 +232,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 900
       objectReference: {fileID: 0}
+    - target: {fileID: 224503459455741000, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224693783200622184, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
       propertyPath: m_Pivot.x
       value: 0
