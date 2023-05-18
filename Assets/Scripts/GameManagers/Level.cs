@@ -76,8 +76,8 @@ namespace GameManagers
 
         public void AdaptForMobile()
         {
-            _puzzle.transform.Find("ImageObject").GetComponent<RectTransform>().localScale *= new Vector2(1.3f, 1);
-            _puzzle.transform.Find("GridObject").GetComponent<RectTransform>().localScale *= new Vector2(1.3f, 1);
+            _puzzle.transform.Find("ImageObject").GetComponent<RectTransform>().localScale *= new Vector2(1.6f, 1);
+            _puzzle.transform.Find("GridObject").GetComponent<RectTransform>().localScale *= new Vector2(1.6f, 1);
         }
     }
 }

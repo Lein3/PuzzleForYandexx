@@ -201,6 +201,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 64d1a2a4ac97d384399e31187c52eeb5, type: 3}
     - target: {fileID: 114585067545178154, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114585067545178154, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
       propertyPath: m_ReferenceResolution.x
       value: 1920
       objectReference: {fileID: 0}
@@ -230,7 +234,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224503459455741000, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 900
+      value: 1080.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224503459455741000, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 224503459455741000, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00090027
       objectReference: {fileID: 0}
     - target: {fileID: 224503459455741000, guid: a2f5dd2c24470d04585e0a73e6c1d6f3, type: 3}
       propertyPath: m_ConstrainProportionsScale
