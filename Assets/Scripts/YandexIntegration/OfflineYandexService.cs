@@ -3,14 +3,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using UnityEngine;
 
-#if UNITY_EDITOR
 namespace Assets.Scripts.YandexIntegration
 {
     internal class OfflineYandexService : IYandexService
     {
         public bool CanShowAdv { get; private set; } = true;
 
-        public bool IsMobile => true;
+        public bool IsMobile => false;
 
         public async void ShowFullscreenAdv()
         {
@@ -57,4 +56,3 @@ namespace Assets.Scripts.YandexIntegration
         }
     }
 }
-#endif

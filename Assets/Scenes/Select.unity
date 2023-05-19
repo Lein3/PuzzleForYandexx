@@ -151,7 +151,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5c6e1554309004e4b89435104d4ead2f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0a24fe77150731e4b92bfcd1b9f1a33e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2160,7 +2160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: d38c555da2e7f95439bf142062b8986f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a427fc33298dc349a5257770a14994b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2271,7 +2271,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1124258838}
   m_HandleRect: {fileID: 1124258837}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

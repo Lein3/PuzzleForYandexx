@@ -9,11 +9,7 @@ public class YandexManager : MonoBehaviour
 
     private void Awake()
     {
-#if UNITY_EDITOR
         Instance ??= new OfflineYandexService();
-#else
-        Instance ??= new OnlineYandexService();
-#endif
     }
 
     public static void ShowFullscreenAdv()
